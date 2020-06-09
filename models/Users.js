@@ -22,6 +22,10 @@ const UsersSchema = mongoose.Schema({
     require: true,
     trim: true,
   },
+  is_active: {
+    type: Boolean,
+    default: true,
+  },
 });
 
 const Users = mongoose.model('Users', UsersSchema);

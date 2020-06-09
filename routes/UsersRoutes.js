@@ -6,12 +6,12 @@ const { UsersController } = require('../controllers');
 const { UsersValidator } = require('../validator');
 
 // Create
-router.post('/api/v1/users',
+router.post('/users',
   UsersValidator.create,
   UsersController.create);
 
 // Read all
-router.get('/api/v1/users',
+router.get('/users',
   UsersController.findAll);
 
 module.exports = router;

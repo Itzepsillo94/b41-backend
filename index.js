@@ -1,4 +1,13 @@
 /* eslint-disable no-console */
+/*
+MVC
+ vista
+ modelo
+ controlador
+
+ Middlewares
+ intermediarios que nos mando el cliente
+ */
 require('dotenv').config();
 require('./mongoClient');
 const api = require('./api');

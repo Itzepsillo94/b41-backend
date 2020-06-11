@@ -33,6 +33,18 @@ const UsersSchema = mongoose.Schema({
     type: Boolean,
     default: true,
   },
+  posts: {
+    images: [{ type: String }],
+    content: { type: String },
+    date: { type: Date, default: Date.now() },
+    tags: [{ type: String }],
+    /*
+    reactions: [{
+      user_name: String,
+      reaction_name: String,
+    }],
+    */
+  },
 });
 
 UsersSchema.pre('save', function (next) {

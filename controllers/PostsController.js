@@ -3,9 +3,10 @@ const { UsersService, PostsService } = require('../services');
 module.exports = {
   create: async (req, res) => {
     try {
+      // Ticket
       const { id } = req.params;
       // 1. Encontrar el usuario por el id que me pasan por parms
-      const user = await UsersService.findOneByEmail(id);
+      const user = await UsersService.findOneById(id);
       // 2. Crear el objeto  de POST
       const post = await PostsService.create(req.body);
       // 3. Agregar post al usario

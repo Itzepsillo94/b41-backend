@@ -7,4 +7,5 @@ module.exports = {
   },
   findAll: () => Users.find({ is_active: true }),
   findOneByEmail: (email) => Users.findOne({ email }),
+  // findOneById: (id) => Users.findById(Id),
 };

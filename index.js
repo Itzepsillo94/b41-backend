@@ -9,6 +9,9 @@ MVC
  intermediarios que nos mando el cliente
  */
 require('dotenv').config();
+
+// console.log(process.env);
+
 require('./mongoClient');
 const api = require('./api');
 

@@ -33,7 +33,7 @@ const UsersSchema = mongoose.Schema({
     type: Boolean,
     default: true,
   },
-  posts: {
+  posts: [{
     images: [{ type: String }],
     content: { type: String },
     date: { type: Date, default: Date.now() },
@@ -44,7 +44,7 @@ const UsersSchema = mongoose.Schema({
       reaction_name: String,
     }],
     */
-  },
+  }],
 });
 
 UsersSchema.pre('save', function (next) {

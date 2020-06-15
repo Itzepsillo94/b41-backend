@@ -3,6 +3,7 @@
 /* eslint-disable func-names */
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
+const { PostsSchema } = require('./Posts');
 
 const SALT_WORK_FACTOR = 10;
 
@@ -33,18 +34,14 @@ const UsersSchema = mongoose.Schema({
     type: Boolean,
     default: true,
   },
-  posts: [{
-    images: [{ type: String }],
-    content: { type: String },
-    date: { type: Date, default: Date.now() },
-    tags: [{ type: String }],
-    /*
+  posts: [PostsSchema],
+  /*
     reactions: [{
       user_name: String,
       reaction_name: String,
     }],
-    */
-  }],
+  */
+
 });
 
 UsersSchema.pre('save', function (next) {

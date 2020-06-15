@@ -2,13 +2,13 @@ const express = require('express');
 
 const router = express.Router();
 
-const {  } = require('../controllers');
-const {  } = require('../validator');
+const { PostsController } = require('../controllers');
+const { PostsValidator } = require('../validator');
 
 // Create
 router.post('/users/:id/posts',
-PostsValidator.create,
-PostsController.create);
+  PostsValidator.create,
+  PostsController.create);
 
 
 module.exports = router;
